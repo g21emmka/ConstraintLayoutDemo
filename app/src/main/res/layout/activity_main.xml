@@ -28,21 +28,25 @@
                 <ImageView
                     android:id="@+id/hero_image"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="194dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                 <TextView
                     android:id="@+id/card_body_text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/hero_image"
+                    app:layout_constraintStart_toStartOf="parent"
                     android:text="TextView" />
 
                 <EditText
                     android:id="@+id/signin"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/card_body_text"
+                    app:layout_constraintStart_toStartOf="parent"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="Name" />
@@ -51,6 +55,8 @@
                     android:id="@+id/signin_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/signin"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:text="Button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
