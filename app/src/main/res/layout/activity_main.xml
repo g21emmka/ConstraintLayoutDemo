@@ -8,9 +8,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/cardview_dark_background"
         android:layout_margin="16dp"
         >
 
@@ -22,6 +23,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/card_body"
                 app:layout_constraintTop_toBottomOf="@id/card_title"
+                app:layout_constraintStart_toStartOf="parent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -39,7 +41,11 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/hero_image"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:text="TextView" />
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="What is your name?" />
 
                 <EditText
                     android:id="@+id/signin"
@@ -47,9 +53,13 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/card_body_text"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15dp"
+                    android:background="@color/cardview_light_background"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Name" />
+                    android:text="Please type your name" />
 
                 <Button
                     android:id="@+id/signin_button"
@@ -57,7 +67,9 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@id/signin"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:text="Button" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Sign in" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -73,11 +85,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="TextView"
+                    android:text="Log in"
                     android:textSize="21sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@id/card_title_image"
-
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
